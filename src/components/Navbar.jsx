@@ -36,7 +36,7 @@ function Navbar() {
           className="text-3xl text-or1 md:hidden"
           onClick={() => setSidebarOpen(true)}
         >
-          ▶
+          <img src="hb1.svg " className="h-6 w-6"/>
         </button>
 
         {/* Desktop View Links */}
