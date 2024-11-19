@@ -60,7 +60,7 @@ function Home() {
           </div>
         </div>
 
-        <p className="text-center text-p1 font-ubuntu text-2xl font-normal">[click arrow to switch b/w yrs]</p>
+        <p className="text-center text-p1 font-ubuntu text-lg md:text-2xl font-normal">[click arrow to switch b/w yrs]</p>
         <div id="year-section" className="yr pb-10 flex justify-center items-center mt-10">
           <button
             onClick={prevYear}

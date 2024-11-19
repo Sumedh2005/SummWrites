@@ -66,55 +66,54 @@ function Y2ppt() {
   ];
 
   return (
-    <div className="relative h-full pb-20  bg-cover bg-center">
-      <div className="absolute inset-0"></div>
-      <div className="relative z-10 font-ubuntu">
-        {/* Title */}
-        <div className="flex justify-center mr-16">
-          <div className="bg-[url('/bg1.svg')] w-[550px] text-center text-or1 text-6xl font-semibold pt-10 h-44 rounded-3xl">
-            Year 2  [PPT's]
+    <div className=" font-ubuntu">
+    {/* Title */}
+    <div className="flex justify-center mr-16">
+      <div className="bg-[url('/bg1.svg')]  text-center text-or1  font-semibold pt-10 ml-16 md:ml-0 h-44 rounded-3xl md:w-[450px] w-[350px] text-4xl">
+        Year 2 [PPT's]
+      </div>
+    </div>
+
+    {/* Subject List */}
+    <div className="main flex flex-col space-y-4 mb-10   md:px-72 px-5 ">
+      {subjects.map((subject) => (
+        <div key={subject.id}>
+          {/* Subject Item */}
+          <div
+            className={`flex flex-row justify-between items-center ${subject.color} rounded-xl p-4`}
+          >
+            {/* Icon */}
+            <div className="icn md:w-12 md:h-12 h-8 w-8">
+              <img
+                src={subject.icon}
+                alt={`${subject.name} Icon`}
+                className="w-full h-full"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="txt flex flex-col flex-1 px-4">
+              <p className="md:text-3xl text-2xl text-white font-semibold ">
+                {subject.name}
+              </p>
+              <p className="md:text-xl text:md text-white font-light ">
+                {subject.details}
+              </p>
+            </div>
+
+            {/* Arrow Button */}
+            <button
+              className="md:text-4xl text-2xl text-white font-bold"
+              onClick={() =>
+                setSelectedSubject(
+                  selectedSubject === subject.id ? null : subject.id
+                )
+              }
+            >
+              {selectedSubject === subject.id ? "▲" : "▶"}
+            </button>
           </div>
-        </div>
 
-        {/* Subject List */}
-        <div className="main flex flex-col space-y-4  px-96">
-          {subjects.map((subject) => (
-            <div key={subject.id}>
-              {/* Subject Item */}
-              <div
-                className={`flex flex-row justify-between items-center ${subject.color} rounded-xl p-4`}
-              >
-                {/* Icon */}
-                <div className="icn w-12 h-12">
-                  <img
-                    src={subject.icon}
-                    alt={`${subject.name} Icon`}
-                    className="w-full h-full"
-                  />
-                </div>
-
-                {/* Text */}
-                <div className="txt flex flex-col flex-1 px-4">
-                  <p className="text-3xl text-white font-semibold">
-                    {subject.name}
-                  </p>
-                  <p className="text-xl text-white font-light">
-                    {subject.details}
-                  </p>
-                </div>
-
-                {/* Arrow Button */}
-                <button
-                  className="text-4xl text-white font-bold"
-                  onClick={() =>
-                    setSelectedSubject(
-                      selectedSubject === subject.id ? null : subject.id
-                    )
-                  }
-                >
-                  {selectedSubject === subject.id ? "▲" : "▶"}
-                </button>
-              </div>
 
               {/* Notes Section */}
               {selectedSubject === subject.id && (
@@ -149,7 +148,6 @@ function Y2ppt() {
           ))}
         </div>
       </div>
-    </div>
   );
 }
 

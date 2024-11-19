@@ -144,7 +144,7 @@ function Year1() {
             {selectedSubject === subject.id && (
                 <div className="notes mt-6 h-auto w-full rounded-2xl">
                   {subject.notes.length > 0 ? (
-                    <ul className="flex md:flex-row flex-col  md:space-x-6 gap-y-2 ml-20 md:ml-0 mt-4">
+                    <ul className="flex md:flex-row flex-col  md:space-x-6 gap-y-2 ml-16 md:ml-0 mt-4">
                       {subject.notes.map((note, index) => (
                         <li key={index} className="flex-shrink-0">
                           <a
@@ -153,7 +153,7 @@ function Year1() {
                             rel="noopener noreferrer"
                             className="text-[#008080]"
                           >
-                            <div className="n font-ubuntu h-20 font-medium text-xl border-[#008080] border-[2px] pt-6 rounded-2xl text-center p-2 w-48 md:w-36 hover:text-white hover:bg-[#008080]">
+                            <div className="n font-ubuntu h-20 font-medium text-xl border-[#008080]  border-[2px] pt-6 rounded-2xl text-center p-2 w-48 md:w-36 hover:text-white hover:bg-[#008080]">
                               {note.name}
                             </div>
                           </a>

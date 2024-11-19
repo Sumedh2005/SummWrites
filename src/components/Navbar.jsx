@@ -26,7 +26,7 @@ function Navbar() {
         {/* Home Route */}
         <Link
           to="/"
-          className="md:text-5xl ml-28 md:ml-2 text-4xl text-or1 font-bold"
+          className="md:text-5xl ml-24 md:ml-2 text-4xl text-or1 font-bold"
         >
           Summ
         </Link>

@@ -105,7 +105,7 @@ function Y2ppr() {
             {selectedSubject === subject.id && (
                 <div className="notes mt-6 h-auto w-full rounded-2xl">
                   {subject.notes.length > 0 ? (
-                    <ul className="flex md:flex-row flex-col  md:space-x-6 gap-y-2 ml-20 md:ml-0 mt-4">
+                    <ul className="flex md:flex-row flex-col  md:space-x-6 gap-y-2 ml-16 md:ml-0 mt-4">
                       {subject.notes.map((note, index) => (
                         <li key={index} className="flex-shrink-0">
                           <a
