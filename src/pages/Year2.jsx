@@ -59,7 +59,7 @@ function Year2() {
       details: "Year 2 | Units-5",
       color: "bg-or1",
       notes: [
-        { name: "OS Unit-1", url: "/notes/year2/handw/os/osh1.pdf" },
+        { name: "OS Unit-1", url: "/notes/year2/handw/os/oshog1.pdf" },
         { name: "OS Unit-2", url: "/notes/year2/handw/os/osh2.pdf" },
         { name: "OS Unit-3", url: "/notes/year2/handw/os/osh3.pdf" },
         { name: "OS Unit-4", url: "/notes/year2/handw/os/osh4.pdf" },
