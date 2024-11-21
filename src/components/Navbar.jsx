@@ -20,9 +20,9 @@ function Navbar() {
   };
 
   return (
-    <div className="font-ubuntu">
+    <div className="font-ubuntu  ">
       {/* Main Navbar */}
-      <div className="flex justify-between items-center px-4 md:px-16 h-20 border-b-[2px] border-or1">
+      <div className="flex justify-between items-center px-4  md:px-16 h-20 border-b-[2px] border-or1">
         {/* Home Route */}
         <Link
           to="/"
