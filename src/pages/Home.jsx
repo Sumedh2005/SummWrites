@@ -28,7 +28,7 @@ function Home() {
             <img src="hero.svg" alt="Hero" className="w-full max-w-sm md:max-w-none" />
           </div>
           <div className="2 flex flex-col text-or1 justify-center space-y-1 items-center text-center">
-            <p className="text-5xl md:text-8xl r-40 font-bold font-ubuntu whitespace-nowrap">Summ Writes...</p>
+            <p className="text-5xl md:text-8xl r-40 font-bold font-ubuntu whitespace-nowrap">Summ Writes.....</p>
             <p className="text-xl md:text-[33px] ml-2 md:mr-36 font-light whitespace-nowrap">Handwritten notes for 1st n 2nd yrs</p>
           </div>
         </div>
