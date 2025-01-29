@@ -13,31 +13,37 @@ import Y1ppr from "./pages/Y1ppr";
 import Y2ppr from "./pages/Y2ppr";
 import Y1sn from "./pages/Y1sn";
 import Y2sn from "./pages/Y2sn";
+import Notifs from "./pages/Notifs";
+import Hero2 from "./components/Hero2";
+import { DarkModeProvider } from './context/DarkModeContext';
 
 function App() {
   return (
-    <Router>
-      <div className="main h-full bg-[url('/bg1.svg')] pt-6 px-5">
-        {/* Navbar remains constant across all pages */}
-        <Navbar />
+    <DarkModeProvider>
+      <Router>
+        <div className="main h-full  ">
+          {/* Navbar remains constant across all pages */}
+          <Navbar  />
 
-        {/* Routes handle navigation */}
-        <Routes>
-          <Route path="/" element={<Home />} /> {/* Home page */}
-          <Route path="/year1" element={<Year1 />} /> {/* Year 1 page */}
-          <Route path="/year2" element={<Year2 />} /> {/* Year 2 page */}
-          <Route path="/about" element={<About />} /> {/* About page */}
-          <Route path="/contact" element={<Contact />} /> {/* Contact page */}
-          <Route path="/year1ppt" element={<Y1ppt/>}/>
-          <Route path="/year2ppt" element={<Y2ppt/>}/>
-          <Route path="/year1ppr" element={<Y1ppr/>}/>
-          <Route path="/year2ppr" element={<Y2ppr/>}/>
-          <Route path="/year1sn" element={<Y1sn/>}/>
-          <Route path="/year2sn" element={<Y2sn/>}/>
-        </Routes>
-      </div>
-      <Footer /> {/* Footer remains constant across all pages */}
-    </Router>
+          {/* Routes handle navigation */}
+          <Routes>
+            <Route path="/" element={<Home />} /> {/* Home page */}
+            <Route path="/year1" element={<Year1 />} /> {/* Year 1 page */}
+            <Route path="/year2" element={<Year2 />} /> {/* Year 2 page */}
+            <Route path="/about" element={<About />} /> {/* About page */}
+            <Route path="/contact" element={<Contact />} /> {/* Contact page */}
+            <Route path="/year1ppt" element={<Y1ppt/>}/>
+            <Route path="/year2ppt" element={<Y2ppt/>}/>
+            <Route path="/year1ppr" element={<Y1ppr/>}/>
+            <Route path="/year2ppr" element={<Y2ppr/>}/>
+            <Route path="/year1sn" element={<Y1sn/>}/>
+            <Route path="/year2sn" element={<Y2sn/>}/>
+            <Route path="/notifs" element={<Notifs/>}/>
+          </Routes>
+        </div>
+        <Footer /> {/* Footer remains constant across all pages */}
+      </Router>
+    </DarkModeProvider>
   );
 }
 

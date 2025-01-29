@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useDarkMode } from '../context/DarkModeContext';
 
 function Query() {
+  const { darkMode } = useDarkMode();
   const [formData, setFormData] = useState({ email: "", message: "" });
   const [isSending, setIsSending] = useState(false);
 
@@ -43,38 +45,38 @@ function Query() {
   };
 
   return (
-    <div className="main font-ubuntu mt-10 h-[50vh] flex flex-col items-center space-y-6">
+    <div className={`main font-ubuntu mt-10 h-[50vh] flex flex-col items-center space-y-6 ${darkMode ? 'dark' : ''}`}>
       {/* Title */}
-      <p className="text-center font-semibold text-4xl text-or1 md:text-5xl ">
+      <p className="text-center font-semibold text-4xl text-or1 dark:text-gray-100 md:text-5xl">
         Any Queries?
       </p>
-      <p className="text-center font-light md:text-2xl text-lg text-or1 w-[500px] md:w-[650px] px-20 md:px-0 ">
+      <p className="text-center font-light md:text-2xl text-lg text-or1 dark:text-gray-200 w-[500px] md:w-[650px] px-20 md:px-0">
         If you have any questions related to the notes, please feel free to
         email me
       </p>
 
       {/* Email Input */}
-      <div className="h-12 border-[1px] border-or1 rounded-2xl w-[300px] md:w-[350px] sm:w-[280px] flex items-center px-4 space-x-2">
+      <div className="h-12 border-[1px] border-or1 dark:border-gray-400 rounded-2xl w-[300px] md:w-[350px] sm:w-[280px] flex items-center px-4 space-x-2 ">
         <input
           type="email"
           name="email"
           placeholder="Your email"
           value={formData.email}
           onChange={handleChange}
-          className="flex-1 placeholder:text-[#c5c5c5] text-lg focus:outline-none"
+          className="flex-1 placeholder:text-[#c5c5c5] text-lg focus:outline-none bg-transparent dark:text-gray-100"
           required
         />
-        <img src="/mail.svg" alt="Email Icon" className="w-6 h-6 " />
+        <img src="/mail.svg" alt="Email Icon" className="w-6 h-6 dark:invert" />
       </div>
 
       {/* Message Input */}
-      <div className="h-20 md:border-[3px] border-[2px] border-or1 rounded-2xl w-[300px] md:w-[450px] flex items-center">
+      <div className="h-20 md:border-[3px] border-[2px] border-or1 dark:border-gray-400 rounded-2xl w-[300px] md:w-[450px] flex items-center">
         <textarea
           name="message"
           placeholder="Write your message here..."
           value={formData.message}
           onChange={handleChange}
-          className="flex-1 h-full pt-2 resize-none placeholder:text-[#c5c5c5] text-lg px-4 focus:outline-none rounded-l-2xl"
+          className="flex-1 h-full pt-2 resize-none placeholder:text-[#c5c5c5] text-lg px-4 focus:outline-none rounded-l-2xl bg-transparent dark:text-gray-100"
           required
         ></textarea>
         <button
@@ -83,9 +85,9 @@ function Query() {
           disabled={isSending}
         >
           {isSending ? (
-            <div className="loader w-6 h-6 border-2 border-t-transparent text-or1 rounded-full animate-spin"></div>
+            <div className="loader w-6 h-6 border-2 border-t-transparent text-or1 dark:text-gray-400 rounded-full animate-spin"></div>
           ) : (
-            <img src="/send.svg" alt="Send Icon" className="w-10 h-10" />
+            <img src="/send.svg" alt="Send Icon" className="w-10 h-10 dark:invert" />
           )}
         </button>
       </div>

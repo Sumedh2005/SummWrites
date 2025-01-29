@@ -11,6 +11,7 @@ export default {
         or2: "#F3892C",   // Orange 2
         p1: "#978df9",    // Purple 1
         p2: "#E2DFFF",    // Purple 2
+        
       },
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"], // Added Ubuntu font
@@ -18,4 +19,5 @@ export default {
     },
   },
   plugins: [],
+  darkMode : "class",
 };
