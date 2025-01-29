@@ -58,13 +58,13 @@ function Notifs() {
         </div>
 
         {/* Main Content */}
-        <div className="main md:h-[50vh] h-[30vh] font-ubuntu text-center mt-20 mx-auto w-[500px]">
-          {notifications.length > 0 ? (
+        <div className="main md:h-[50vh] h-[30vh]  font-ubuntu text-center pb-20 mt-20 mx-auto md:w-[500px]  w-[250px]">
+          {notifications.length > 0 ? ( 
             <div className="space-y-4">
               {notifications.map((notif) => (
                 <div 
                   key={notif.id} 
-                  className="text-white bg-[#008080] dark:bg-gray-700 p-6 rounded-3xl relative"
+                  className="text-white bg-[#008080] md:dark:bg-gray-700 dark:bg-gray-700 p-6 rounded-3xl relative"
                 >
                   {notif.isNew && (
                     <span className="absolute top-4 right-4 h-3 w-3 bg-red-500 rounded-full"></span>
