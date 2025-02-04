@@ -50,7 +50,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 className="hover:opacity-80"
               >
-                <img src="ig.svg" className="h-7 w-7 " alt="Instagram" />
+                <img src="ig.svg" className="h-7 w-7" alt="Instagram" />
               </a>
 
               <a 
