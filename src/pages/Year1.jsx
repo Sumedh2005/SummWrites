@@ -104,7 +104,7 @@ function Year1() {
           </div>
 
           {/* Subject List */}
-          <div className="main flex flex-col space-y-4 mb-10   md:px-72 px-5 dark ">
+          <div className="main flex flex-col space-y-4 mb-10   md:px-72 px-5  ">
             {subjects.map((subject) => (
               <div key={subject.id}>
                 {/* Subject Item */}

@@ -158,6 +158,9 @@ function Navbar() {
               >
                 Notifs
               </Link>
+              <div className="support">
+                <a href="https://buymeacoffee.com/summ05" className="text-or1 text-xl font-semibold">Support </a>
+              </div>
             </div>
           </div>
         </div>

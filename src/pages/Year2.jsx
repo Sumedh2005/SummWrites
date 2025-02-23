@@ -115,7 +115,10 @@ function Year2() {
       icon: "/2icn.svg",
       details: "Year 2 | Units-3",
       color: "bg-p1 dark:bg-transparent dark:border-4 dark:border-or1",
-      notes: [],
+      notes: [
+        { name: "Social Engineering Unit-1", url: "/notes/year2/sem4/notes/se/sen1.pdf" },
+        { name: "Social Engineering Unit-2", url: "/notes/year2/sem4/notes/se/sen2.pdf" },
+      ],
     },
     {
       id: 10,
