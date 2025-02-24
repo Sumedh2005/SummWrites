@@ -126,7 +126,11 @@ function Year2() {
       icon: "/3icn.svg",
       details: "Year 2 | Units-5",
       color: "bg-or1 dark:bg-transparent dark:border-4 dark:border-or1",
-      notes: [],
+      notes: [
+        { name: "AI Unit-1", url: "/notes/year2/sem4/notes/ai/ain1.pdf" },
+        { name: "AI Unit-2", url: "/notes/year2/sem4/notes/ai/ain2.pdf" },
+       
+      ],
     },
   ];
 
