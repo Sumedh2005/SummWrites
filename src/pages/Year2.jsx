@@ -99,7 +99,11 @@ function Year2() {
       icon: "/4icn.svg",
       details: "Year 2 | Units-5",
       color: "bg-p1 dark:bg-transparent dark:border-4 dark:border-or1",
-      notes: [],
+      notes: [
+        {
+          name: "DAA Unit-1/2", url: "/notes/year2/sem4/notes/daa/daan12.pdf" }
+        
+      ],
     },
     {
       id: 8,
